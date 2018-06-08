@@ -1,0 +1,48 @@
+# User-specific files
+*.suo
+*.user
+*.dat
+*.log
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+bld/
+[Bb]in/
+[Oo]bj/
+/FunctionalTests/TestResults/
+
+# Node.js modules
+node_modules
+
+# NuGet Packages
+*.nupkg
+**/packages/*
+!**/packages/build/
+!**/packages/repositories.config
+
+# NUnit
+*.VisualState.xml
+TestResult.xml
+
+# Chutzpah Test files
+_Chutzpah*
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+
+# ReSharper is a .NET coding add-in
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+#StyleCop
+StyleCop.Cache
+
+*/.idea/
+.idea/
+*/.vs/
+.vs/
+
