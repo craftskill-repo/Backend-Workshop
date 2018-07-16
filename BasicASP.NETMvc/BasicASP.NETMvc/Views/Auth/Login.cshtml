@@ -1,0 +1,16 @@
+﻿@model BasicASP.NETMvc.Models.User
+
+<h2>login</h2>
+
+@using (Html.BeginForm("Login", "Auth", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <h2 class="form-signin-heading">User Login</h2>
+    @Html.TextBoxFor(model => model.UserName, htmlAttributes:new { @class = "form-control", type = "text", placeholder = "userName" })
+    <br />
+    @Html.PasswordFor(model => model.PassWord, htmlAttributes:new { @class = "form-control", type = "password", placeholder = "Password" })
+    <p>@ViewBag.Error</p>
+    <button class="btn btn-primary" type="submit">Login</button>            
+}
