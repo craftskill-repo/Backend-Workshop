@@ -3,7 +3,9 @@ using System.Globalization;
 using System.Text;
 using BasicCSharp.Common;
 using Xunit;
-
+/**
+ * 这个测试类作用：？？？
+ */
 namespace BasicCSharp
 {
     public class ExtensionMethod
@@ -12,11 +14,11 @@ namespace BasicCSharp
         public void should_treat_first_parameter_as_this_for_extension_method()
         {
             const string message = "Hello!";
-
+            
             string returnValue = message.OhGodItLooksAsIfIWasAMemberOfString();
 
             // please update variable value to fix the test.
-            const string expectedReturnValue = "";
+            const string expectedReturnValue = "Hello!";
 
             Assert.Equal(expectedReturnValue, returnValue);
         }
@@ -30,7 +32,7 @@ namespace BasicCSharp
                 numberList.MySelect(number => number.ToString(CultureInfo.InvariantCulture));
 
             // please update variable value to fix the test.
-            IEnumerable<string> expectedResult = new[] {"hehe"};
+            IEnumerable<string> expectedResult = new[] {"1","2","3"};
 
             Assert.Equal(expectedResult, transformedResult);
         }

@@ -41,8 +41,10 @@ namespace BasicCSharp.Common
 
             return new Name(firstName, lastName);
         }
-
-        public static implicit operator string(Name name)
+/**
+ * 这里应该改为显式转换？？？implicit-->explicit
+ */
+        public static explicit operator string(Name name)
         {
             return name == null ? null : name.ToString();
         }

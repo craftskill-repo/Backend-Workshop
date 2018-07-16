@@ -14,8 +14,8 @@ namespace BasicCSharp
             };
 
             // please update the variable values for the following 2 lines to fix the test.
-            const string expectedFirstName = "";
-            const string expectedLastName = "";
+            const string expectedFirstName = "Bill";
+            const string expectedLastName = "Gates";
 
             Assert.Equal(expectedFirstName, annonymousTypeInstance.FirstName);
             Assert.Equal(expectedLastName, annonymousTypeInstance.LastName);
@@ -33,8 +33,8 @@ namespace BasicCSharp
             };
 
             // please update the variable values for the following 2 lines to fix the test.
-            const string expectedFirstName = "";
-            const string expectedLastName = "";
+            const string expectedFirstName = "Bill";
+            const string expectedLastName = "Gates";
 
             Assert.Equal(expectedFirstName, annonymousTypeInstance.firstName);
             Assert.Equal(expectedLastName, annonymousTypeInstance.LastName);
@@ -54,9 +54,9 @@ namespace BasicCSharp
             };
 
             // please update the variable values for the following 3 lines to fix the test.
-            const string expectedFirstName = "";
-            const string expectedLastName = "";
-            const int expectedAge = 20;
+            const string expectedFirstName = "Bill";
+            const string expectedLastName = "Gates";
+            const int expectedAge = 59;
 
             Assert.Equal(expectedFirstName, personalInformation.Name.FirstName);
             Assert.Equal(expectedLastName, personalInformation.Name.LastName);
