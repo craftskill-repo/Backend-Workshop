@@ -111,7 +111,7 @@ namespace BasicCSharp
             Assert.Equal(expectedEnumValue, parsedBottomEnumValue);
         }
         /**
-         * 
+         * flags attribute
          */
         [Fact]
         public void should_declare_flag_when_enum_values_can_be_combined()
@@ -124,6 +124,9 @@ namespace BasicCSharp
             const bool expectedIncludeLeft = true;
 
             Assert.Equal(expectedIncludeLeft, includeLeft);
+
+            const BorderSideFlag border = BorderSideFlag.Left | BorderSideFlag.Right;
+            Assert.Equal(leftAndRight,border);
         }
     }
 }

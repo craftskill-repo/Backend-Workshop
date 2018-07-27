@@ -65,7 +65,7 @@ namespace BasicCSharp
             demoObject.Greet("Hello World");
 
             // change the variable value to fix the test.
-            const string expectedContent = "World";
+            const string expectedContent = "Hello Hello World";
 
             Assert.Equal(expectedContent, greetingContent);
         }
