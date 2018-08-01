@@ -18,4 +18,7 @@
   <ItemGroup>
     <Compile Remove="Extensions\SimpleCSharpCompiler.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BasicCSharpDemo\BasicCSharpDemo.csproj" />
+  </ItemGroup>
 </Project>
