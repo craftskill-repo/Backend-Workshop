@@ -20,7 +20,7 @@ namespace BasicCSharp.Demo
             Console.WriteLine("test git checkout test dev1 confliect");
             Console.WriteLine("test git checkout   dev1 confliect");
             
-            Console.WriteLine("dev1 confliect!");
+            Console.WriteLine("dev1 confliect!ddddd");
         }
 
     }
