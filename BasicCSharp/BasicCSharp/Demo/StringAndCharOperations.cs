@@ -17,7 +17,7 @@ namespace BasicCSharp.Demo
             VisitModifier vm =new VisitModifier();
             int a =VisitModifier.b;
             
-            Console.WriteLine("test git checkout");
+            Console.WriteLine("test git checkout test dev1 confliect");
         }
 
     }
