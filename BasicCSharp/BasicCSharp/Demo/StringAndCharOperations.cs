@@ -18,8 +18,8 @@ namespace BasicCSharp.Demo
             int a =VisitModifier.b;
             
             Console.WriteLine("test git checkout");
-            
-            
+            Console.WriteLine("dev2 push to master");
+            Console.WriteLine("git commit --amend");
             Console.WriteLine("test git sfafasdfadsfagfdagfdgsdtashdfasfasfadsf");
         }
 
