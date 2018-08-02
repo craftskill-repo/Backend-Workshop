@@ -20,7 +20,9 @@ namespace BasicCSharp.Demo
             Console.WriteLine("test git checkout");
             Console.WriteLine("dev2 push to master");
             Console.WriteLine("git commit --amend");
-            Console.WriteLine("test git sfafasdfadsfagfdagfdgsdtashdfasfasfadsf");
+            Console.WriteLine("test git checkout   dev1 confliect");
+            
+            Console.WriteLine("dev1 confliect!");
         }
 
     }
