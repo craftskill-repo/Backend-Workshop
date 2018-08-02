@@ -18,6 +18,8 @@ namespace BasicCSharp.Demo
             int a =VisitModifier.b;
             
             Console.WriteLine("test git checkout");
+            
+            Console.WriteLine("dev1 confliect!");
         }
 
     }
