@@ -23,6 +23,9 @@ namespace BasicCSharp.Demo
             Console.WriteLine("test git checkout test dev1 confliect");
             Console.WriteLine("test git checkout   dev1 confliect");
             Console.WriteLine("dev1 confliect!ddddd");
+
+
+            Console.WriteLine("master branch commit 1");
         }
 
     }
