@@ -33,6 +33,8 @@ namespace BasicCSharp.Demo
             Console.WriteLine("master branch commit 2");       
 
             Console.WriteLine("dev1 branch commit 1");
+
+            Console.WriteLine("dev1 branch commit 2");
         }
 
     }
