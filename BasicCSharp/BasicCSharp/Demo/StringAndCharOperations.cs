@@ -25,6 +25,9 @@ namespace BasicCSharp.Demo
             Console.WriteLine("dev1 confliect!ddddd");
 
 
+            Console.WriteLine("dev2 commit1");
+
+
             Console.WriteLine("master branch commit 1");
         }
 
