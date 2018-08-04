@@ -16,7 +16,7 @@ namespace BasicCSharp
             int returnedValue = methodCapturingVariable();
 
             // change variable value to correct test.
-            const int expectedReturnedValue = default(int);
+            const int expectedReturnedValue = 1;
 
             Assert.Equal(expectedReturnedValue, returnedValue);
         }
@@ -25,16 +25,19 @@ namespace BasicCSharp
         public void should_modify_outer_variable()
         {
             int outerVariable = 1;
-
+            //lambda 函数：匿名函数的使用
             Action methodChangeVariableValue = () => outerVariable += 1;
             methodChangeVariableValue();
 
             // change variable value to correct test.
-            const int expectedOuterVariableValue = 1;
+            const int expectedOuterVariableValue = 2;
 
-            Assert.Equal(expectedOuterVariableValue, outerVariable); 
+            Assert.Equal(expectedOuterVariableValue, outerVariable);
         }
 
+/**
+ * Func???
+ */
         [Fact]
         public void should_use_caution_when_capturing_outer_variable_in_loop()
         {
@@ -51,7 +54,7 @@ namespace BasicCSharp
                 sum += func();
             }
 
-            const int expectedSum = 3;
+            const int expectedSum = 9;
 
             Assert.Equal(expectedSum, sum);
         }

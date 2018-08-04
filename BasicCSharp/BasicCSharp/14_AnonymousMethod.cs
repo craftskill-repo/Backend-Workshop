@@ -1,6 +1,8 @@
 ﻿using System;
 using Xunit;
-
+/**
+ * 匿名方法
+ */
 namespace BasicCSharp
 {
     public class AnonymousMethod
@@ -16,7 +18,7 @@ namespace BasicCSharp
             int transformResult = doubleTransform(2);
 
             // change variable value to fix test.
-            const int expectedResult = default(int);
+            const int expectedResult = 4;
 
             Assert.Equal(expectedResult, transformResult);
         }
@@ -29,7 +31,7 @@ namespace BasicCSharp
             int transformResult = doubleTransform(2);
 
             // change variable value to fix test.
-            const int expectedResult = default(int);
+            const int expectedResult = 4;
 
             Assert.Equal(expectedResult, transformResult);
         }

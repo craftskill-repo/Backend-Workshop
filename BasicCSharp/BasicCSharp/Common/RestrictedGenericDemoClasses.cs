@@ -1,5 +1,5 @@
 ﻿namespace BasicCSharp.Common
-{
+{//where T:struct 定义泛型的子类；类似于Java中<T extends ?>
     internal class ValueTypeRestrictedGenericDemoClass<T>
         where T : struct 
     {

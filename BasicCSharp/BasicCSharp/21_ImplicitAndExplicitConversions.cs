@@ -11,7 +11,7 @@ namespace BasicCSharp
             Name name = "Bill Gates";
 
             // please update variable value to fix the test.
-            const string expectedName = "";
+            const string expectedName = "Bill Gates";
 
             Assert.Equal(expectedName, name.ToString());
         }
@@ -22,7 +22,7 @@ namespace BasicCSharp
             Name name = "Bill Gates";
 
             // please update variable value to fix the test.
-            const string expectedName = "";
+            const string expectedName = "Bill Gates";
 
             Assert.Equal(expectedName, (string)name);            
         }

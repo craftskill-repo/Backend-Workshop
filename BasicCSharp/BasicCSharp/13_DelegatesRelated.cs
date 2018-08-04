@@ -27,7 +27,7 @@ namespace BasicCSharp
             TransformerDelegateDemo transformer = EquivalentTransformation;
 
             // change variable value to fix test.
-            const string expectedDelegateType = "";
+            const string expectedDelegateType ="TransformerDelegateDemo";
 
             Assert.Equal(expectedDelegateType, typeof(TransformerDelegateDemo).Name);
             Assert.True(transformer is Delegate);
@@ -41,7 +41,7 @@ namespace BasicCSharp
             int transformResult = transformer(2);
 
             // change variable value to fix test.
-            const int expectedResult = default(int);
+            const int expectedResult =2;
 
             Assert.Equal(expectedResult, transformResult);
         }
@@ -54,7 +54,7 @@ namespace BasicCSharp
             int actualResult = PassingDelegateAsArgument(transformer);
 
             // change variable value to fix test.
-            const int expectedResult = default(int);
+            const int expectedResult = 5;
 
             Assert.Equal(expectedResult, actualResult);
         }
@@ -70,7 +70,7 @@ namespace BasicCSharp
             theDelegate();
 
             // change variable value to fix test.
-            var expectedTrace = new string[] {};
+            var expectedTrace = new string[] {"MulticastDelegateDemoClass.OneMethod() called","MulticastDelegateDemoClass.AnotherMethod() called"};
 
             Assert.Equal(expectedTrace, demoObject.Trace);
         }
@@ -87,7 +87,7 @@ namespace BasicCSharp
             theDelegate();
 
             // change variable value to fix test.
-            var expectedTrace = new string[] { };
+            var expectedTrace = new string[] { "MulticastDelegateDemoClass.AnotherMethod() called"};
 
             Assert.Equal(expectedTrace, demoObject.Trace);
         }
@@ -103,7 +103,7 @@ namespace BasicCSharp
             theDelegate += demoObject.AnotherMethod;
 
             // change variable value to fix test.
-            const bool areReferenceEqual = true;
+            const bool areReferenceEqual = false;
 
             Assert.Equal(areReferenceEqual, ReferenceEquals(theDelegate, copy));
         }
@@ -120,11 +120,14 @@ namespace BasicCSharp
             ((a + b + c) - (a + c))();
 
             // change variable value to fix test.
-            const string expectedOutput = "B";
+            const string expectedOutput = "A,B,C";
 
             Assert.Equal(expectedOutput, demoObject.ToString());
         }
 
+        /**
+         * 为什么只取最后一个？？
+         */
         [Fact]
         public void should_get_result_of_last_called_function()
         {
@@ -137,7 +140,7 @@ namespace BasicCSharp
             int returnedResult = (returnsOne + returnsThree + returnsTwo)();
 
             // change variable value to fix test.
-            const int expectedResult = 6;
+            const int expectedResult = 2;
 
             Assert.Equal(expectedResult, returnedResult);
         }
@@ -152,7 +155,7 @@ namespace BasicCSharp
             object returnedValue = delegateReturnsObject();
 
             // change variable value to fix test.
-            object expectedValue = null;
+            object expectedValue = "Hello";
 
             Assert.Equal(expectedValue, returnedValue);
         }
@@ -168,7 +171,7 @@ namespace BasicCSharp
             string returnedValue = delegateAcceptsString("Good");
 
             // change variable value to fix test.
-            const string expectedValue = "";
+            const string expectedValue = "Good";
 
             Assert.Equal(expectedValue, returnedValue);
         }

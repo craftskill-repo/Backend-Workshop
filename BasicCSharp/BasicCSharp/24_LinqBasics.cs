@@ -3,11 +3,16 @@ using System.Globalization;
 using System.Linq;
 using BasicCSharp.Common;
 using Xunit;
-
+/**
+ * LinQ
+ */
 namespace BasicCSharp
 {
     public class Linq2ObjectBasics
     {
+        /**
+         * where 条件查询
+         */
         [Fact]
         public void should_filtering_elements_using_where()
         {
@@ -20,11 +25,13 @@ namespace BasicCSharp
 
             // please update variable value to fix the test.
             IEnumerable<string> expectedResult =
-                new[] {"a", "quick", "brown", "fox", "jumps", "over", "a", "lazy", "dog"};
+                new[] {"quick", "brown", "jumps"};
 
             Assert.Equal(expectedResult, filteredResult);
         }
-
+        /**
+         * select??
+         */
         [Fact]
         public void should_project_elements_using_select()
         {
@@ -39,11 +46,13 @@ namespace BasicCSharp
 
             // please update variable value to fix the test.
             IEnumerable<string> expectedResult =
-                new[] {"Edogawa Conan", "Ogiso Setsuna"};
+                new[] {"Edogawa Conan", "Ogiso Setsuna","Kirigaya Katsuto"};
 
             Assert.Equal(expectedResult, projection);
         }
-
+        /**
+         * 取数组中的前n个元素
+         */
         [Fact]
         public void should_take_first_n_elements_using_take()
         {
@@ -52,11 +61,13 @@ namespace BasicCSharp
             IEnumerable<int> filteredElements = sequence.Take(3);
 
             // please update variable value to fix the test.
-            IEnumerable<int> expectedResult = new[] {1, 2, 3, 4, 5};
+            IEnumerable<int> expectedResult = new[] {1, 2, 3};
 
             Assert.Equal(expectedResult, filteredElements);
         }
-
+        /**
+         * 跳过数组中的前n个元素
+         */
         [Fact]
         public void should_skip_first_n_elements_using_skip()
         {
@@ -65,11 +76,13 @@ namespace BasicCSharp
             IEnumerable<int> filteredElements = sequence.Skip(3);
 
             // please update variable value to fix the test.
-            IEnumerable<int> expectedResult = new[] {1, 2, 3, 4, 5};
+            IEnumerable<int> expectedResult = new[] {4, 5};
 
             Assert.Equal(expectedResult, filteredElements);
         }
-
+        /**
+         * 
+         */
         [Fact]
         public void should_get_first_element_using_first()
         {
@@ -79,8 +92,8 @@ namespace BasicCSharp
             int firstEvenNumber = sequence.First(item => item % 2 == 0);
 
             // please update variable values for the following 2 lines to fix the test.
-            const int expectedFirstElement = 0;
-            const int expectedFirstEvenNumber = 0;
+            const int expectedFirstElement = 1;
+            const int expectedFirstEvenNumber = 2;
 
             Assert.Equal(expectedFirstElement, firstElement);
             Assert.Equal(expectedFirstEvenNumber, firstEvenNumber);
@@ -95,8 +108,8 @@ namespace BasicCSharp
             int lastEvenNumber = sequence.Last(item => item % 2 == 0);
 
             // please update variable values for the following 2 lines to fix the test.
-            const int expectedLastElement = 0;
-            const int expectedLastEvenNumber = 0;
+            const int expectedLastElement = 5;
+            const int expectedLastEvenNumber = 4;
 
             Assert.Equal(expectedLastElement, lastElement);
             Assert.Equal(expectedLastEvenNumber, lastEvenNumber);
@@ -110,7 +123,7 @@ namespace BasicCSharp
             int thirdElement = sequence.ElementAt(2);
 
             // please update variable value to fix the test.
-            const int expectedThirdElement = 0;
+            const int expectedThirdElement = 3;
 
             Assert.Equal(expectedThirdElement, thirdElement);
         }
@@ -124,8 +137,8 @@ namespace BasicCSharp
             int numberOfEvenNumbers = sequence.Count(item => item % 2 == 0);
 
             // please update variable value to fix the test.
-            const int expectedTotalNumber = 0;
-            const int expectedNumberOfEvenNumbers = 0;
+            const int expectedTotalNumber = 5;
+            const int expectedNumberOfEvenNumbers = 2;
 
             Assert.Equal(expectedTotalNumber, totalNumber);
             Assert.Equal(expectedNumberOfEvenNumbers, numberOfEvenNumbers);
@@ -139,7 +152,7 @@ namespace BasicCSharp
             int minNumber = sequence.Min();
 
             // please update variable value to fix the test.
-            const int expectedMinNumber = 0;
+            const int expectedMinNumber = 1;
 
             Assert.Equal(expectedMinNumber, minNumber);
         }
@@ -152,7 +165,7 @@ namespace BasicCSharp
             int maxNumber = sequence.Max();
 
             // please update variable value to fix the test.
-            const int expectedMaxNumber = 0;
+            const int expectedMaxNumber = 5;
 
             Assert.Equal(expectedMaxNumber, maxNumber);
         }
@@ -166,8 +179,8 @@ namespace BasicCSharp
             bool containsTen = sequence.Contains(10);
 
             // please update variable values of the following 2 lines to fix the test.
-            const bool expectedContainsTwo = false;
-            const bool expectedContainsTen = true;
+            const bool expectedContainsTwo = true;
+            const bool expectedContainsTen = false;
 
             Assert.Equal(expectedContainsTwo, containsTwo);
             Assert.Equal(expectedContainsTen, containsTen);
@@ -182,8 +195,8 @@ namespace BasicCSharp
             bool modThreeNotEmpty = sequence.Any(item => item % 3 == 0);
 
             // please update variable values of the following 2 lines to fix the test.
-            const bool expectedSequenceNotEmpty = false;
-            const bool expectedModThreeNotEmpty = false;
+            const bool expectedSequenceNotEmpty = true;
+            const bool expectedModThreeNotEmpty = true;
 
             Assert.Equal(expectedSequenceNotEmpty, sequenceNotEmpty);
             Assert.Equal(expectedModThreeNotEmpty, modThreeNotEmpty);
@@ -197,7 +210,7 @@ namespace BasicCSharp
             bool allEvenNumbers = sequence.All(item => item % 2 == 0);
 
             // please update variable value to fix the test.
-            const bool expectedAllEvenNumbers = false;
+            const bool expectedAllEvenNumbers = true;
 
             Assert.Equal(expectedAllEvenNumbers, allEvenNumbers);
         }
@@ -211,7 +224,7 @@ namespace BasicCSharp
             IEnumerable<int> concat = left.Concat(right);
 
             // please update variable value to fix the test.
-            IEnumerable<int> expectedConcatResult = new[] {1, 2, 3};
+            IEnumerable<int> expectedConcatResult = new[] {1, 2, 3,4,5};
 
             Assert.Equal(expectedConcatResult, concat);
         }
@@ -225,7 +238,7 @@ namespace BasicCSharp
             IEnumerable<int> unionResult = left.Union(right);
 
             // please update variable value to fix the test.
-            IEnumerable<int> expectedUnionResult = new[] { 1, 2, 3 };
+            IEnumerable<int> expectedUnionResult = new[] { 1, 2, 3,4,5};
 
             Assert.Equal(expectedUnionResult, unionResult);
         }
@@ -239,7 +252,7 @@ namespace BasicCSharp
             IEnumerable<int> intersection = firstSequence.Intersect(secondSequence);
 
             // please update variable value to fix the test.
-            IEnumerable<int> expectedIntersection = new[] { 1, 2, 3 };
+            IEnumerable<int> expectedIntersection = new[] { 3 };
 
             Assert.Equal(expectedIntersection, intersection);
         }
@@ -253,7 +266,7 @@ namespace BasicCSharp
             IEnumerable<int> except = firstSequence.Except(secondSequence);
 
             // please update variable value to fix the test.
-            IEnumerable<int> expectedIntersection = new[] { 1, 2, 3 };
+            IEnumerable<int> expectedIntersection = new[] { 1, 2};
 
             Assert.Equal(expectedIntersection, except);
         }
@@ -266,11 +279,13 @@ namespace BasicCSharp
             IOrderedEnumerable<int> orderedResult = sequence.OrderBy(item => item);
 
             // please update variable value to fix the test.
-            IEnumerable<int> expectedOrderedResult = new[] {4, 2, 1, 3, 5};
+            IEnumerable<int> expectedOrderedResult = new[] {1, 2, 3, 4,5};
 
             Assert.Equal(expectedOrderedResult, orderedResult);
         }
-
+        /**
+         * 以一种延迟方式进行迭代
+         */
         [Fact]
         public void should_execute_in_a_deferred_way_for_iteration_operation()
         {
@@ -282,7 +297,7 @@ namespace BasicCSharp
             sequence.Add(2);
 
             // please update variable value to fix the test.
-            IEnumerable<string> expectedProjection = new[] { "1" };
+            IEnumerable<string> expectedProjection = new[] { "1" ,"2"};
 
             Assert.Equal(expectedProjection, projection);
         }
