@@ -37,6 +37,8 @@ namespace BasicCSharp.Demo
             Console.WriteLine("dev1 branch commit 2");
             
             Console.WriteLine("git rebase conflict");
+            
+            Console.WriteLine("dev2 branch commit 3");
         }
 
     }
