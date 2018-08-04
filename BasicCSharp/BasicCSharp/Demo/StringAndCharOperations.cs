@@ -56,6 +56,11 @@ namespace BasicCSharp.Demo
             Console.WriteLine("dev2 branch commit 4");
         }
 
+        public void masterBranch()
+        {
+            Console.WriteLine("master branch commit 5");
+        }
+
     }
     
 }
