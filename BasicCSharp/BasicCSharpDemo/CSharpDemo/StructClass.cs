@@ -19,5 +19,10 @@ namespace BasicCSharpDemo.CSharpDemo
        {
             Console.WriteLine("dev test");
         }
+
+        public void dev2Branch()
+        {
+            Console.WriteLine("dev2 branch commit 5");
+        }
     }
 }
