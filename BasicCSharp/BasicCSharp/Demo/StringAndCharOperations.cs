@@ -46,6 +46,11 @@ namespace BasicCSharp.Demo
             Console.WriteLine("master branch commit 4");
         }
         
+        public void testGitRebase()
+        {
+            Console.WriteLine("dev1 branch commit 3");
+        }
+
 
     }
     
