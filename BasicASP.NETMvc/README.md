@@ -1,5 +1,5 @@
 # Basic Asp.Net MVC 
-Hi! This project is to quickly get familiar with Asp,Net MVC.
+Hi! This project is to quickly get familiar with Asp.Net MVC.The basic point is to get familiar Asp.Net MVC some basic use,the homework is to check your result.
 
 ## Concepts you need to know
 1. Action Result
