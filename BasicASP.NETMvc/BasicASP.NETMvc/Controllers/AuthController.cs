@@ -17,22 +17,22 @@ namespace BasicASP.NETMvc.Controllers
      */
     public class AuthController : Controller
     {
-        
         [System.Web.Mvc.AllowAnonymous]
         public ActionResult Login()
         {
             return View();
         }
-        
+
         [System.Web.Mvc.AllowAnonymous]
         [System.Web.Mvc.HttpPost]
         public ActionResult Login(User user)
         {
-            if (user==null || !"admin".Equals(user.UserName) || !"admin".Equals(user.PassWord))
+            if (user == null || !"admin".Equals(user.UserName) || !"admin".Equals(user.PassWord))
             {
                 ViewBag.Error = "UserName and PassWord is admin";
                 return View();
             }
+
             CreateAuthCookie(user.UserName);
             AddValusToSession(user.UserName);
             return RedirectToAction("Page");
@@ -52,12 +52,13 @@ namespace BasicASP.NETMvc.Controllers
             //basic points 16 please add param into Cookie 
             // use cookie auth
             
+            FormsAuthentication.SetAuthCookie(userName,true,"/");
         }
 
         private void AddValusToSession(string userName)
         {
             //basic points 17 Add param into Session and Seeeion key is "userName"
-          
+            Session["userName"] = userName;
         }
     }
 }

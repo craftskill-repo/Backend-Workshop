@@ -24,18 +24,17 @@ doc：https://www.jianshu.com/p/5f6156cacc76
     
     doc: https://www.cnblogs.com/supersnowyao/archive/2018/01/15/8287775.html
 ### 2.Authorization,Cookie,Session
-    Authorization Filter is the BasicASP.NETMvc.filter.LoginFilter 
     
-    [LoginFilter] method will be authorized
-    
-    BasicASP.NETMvc.Controllers.AuthController.Page() will be authorized in this project 
+    BasicASP.NETMvc.Controllers.AuthController.Page() will be authorized in Basic point part 
     
     cshtml is in the BasicASP.NETMvc.Views.Auth
     
     code is in the BasicASP.NETMvc.Controllers.RazorViewController 
     
     Please modify .cshtml and .cs files to achieve the desired effect
-    
+    Reference doc:
+        https://www.cnblogs.com/JoeSnail/p/8250231.html
+            https://blog.csdn.net/slowlifes/article/details/79521680
 ### 3.Routes
     code is in the BasicASP.NETMvc.Controllers.RouteController
     
