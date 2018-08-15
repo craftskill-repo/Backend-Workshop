@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -39,7 +39,7 @@ namespace BasicASP.NETMvc.Controllers
         }
 
 
-        // please make sure this action should be authed.
+        //basic points 14 please make sure this action should be authed.
         [ValidateAntiForgeryToken]
         [System.Web.Http.Authorize]
         public ActionResult Page()
@@ -49,14 +49,14 @@ namespace BasicASP.NETMvc.Controllers
 
         private void CreateAuthCookie(string userName)
         {
-            // please add param into Cookie 
+            //basic points 16 please add param into Cookie 
             // use cookie auth
             
         }
 
         private void AddValusToSession(string userName)
         {
-            // Add param into Session and Seeeion key is "userName"
+            //basic points 17 Add param into Session and Seeeion key is "userName"
           
         }
     }

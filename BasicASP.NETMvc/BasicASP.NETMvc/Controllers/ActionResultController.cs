@@ -11,46 +11,46 @@ namespace BasicASP.NETMvc.Controllers
         // GET: ActionResult
         public ActionResult Index()
         {
-            // change "null" to correct value.
+            //basic points 1 change "null" to correct value.
             return null;
         }
 
         public ActionResult Baidu()
         {
-            // change "" to Redirect to www.baidu.com
+            //basic points 2 change "" to Redirect to www.baidu.com
             var result = new RedirectResult("http://www.baidu.com");
             return null;
         }
 
         public ActionResult Page()
         {
-            // change "" to correct value.
+            //basic points 3 change "" to correct value.
             string str = "";
             return Content(str);
         }
 
         public ActionResult EmptyAction()
         {
-            // change "null" to correct value.
+            //basic points 4 change "null" to correct value.
             return null;
         }
 
         public ActionResult Redirect2Action()
         {
-            // change null : Redirect to Baidu Action
+            //basic points 5 change null : Redirect to Baidu Action
             return null;
         }
 
         public ActionResult Redirect2Route()
         {
-            // change null : Redirect to Page Route
+            //basic points 6 change null : Redirect to Page Route
             return null;
         }
 
         public ActionResult JsonResult()
         {
             var result = new JsonObject("ActionResultController", "JsonResult");
-            //change null to return a json obj
+            //basic points 7  change null to return a json obj
             return Json(null);
         }
 
@@ -59,25 +59,25 @@ namespace BasicASP.NETMvc.Controllers
             var returnData=new JavaScriptResult();
             var result = "<script><alert>hi,welcome to .net</alert></script>";
             returnData.Script = result;
-            //change null to return a script code
+            //basic points 8 change null to return a script code
             return null;
         }
 
         public ActionResult HttpUnauthorizedResult()
         {
-            // change "null" to correct value.
+            //basic points 9 change "null" to correct value.
             return null;
         }
 
         public ActionResult HttpNotFoundResult()
         {
-            // change "null" to correct value.
+            //basic points 10 change "null" to correct value.
             return null;
         }
 
         public ActionResult HttpStatusCodeResult()
         {
-            // change "null" to correct value.
+            //basic points 11 change "null" to correct value.
             return null;
         }
 

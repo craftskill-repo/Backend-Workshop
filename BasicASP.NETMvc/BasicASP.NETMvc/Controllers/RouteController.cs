@@ -8,12 +8,12 @@ using System.Web.Http;
 namespace BasicASP.NETMvc.Controllers
 {
     [AllowAnonymous]
-    // Please change "api" to made this controller root path is "api/route"
+    //basic points 12 Please change "api" to made this controller root path is "api/route"
     [RoutePrefix("api")]
     public class RouteController : ApiController
     {
         // Get
-        // Change "xxx" and requet "/api/route/index" by Get
+        //basic points 13 Change "xxx" and requet "/api/route/index" by Get
         [Route("xxx")]
         public string Get()
         {
