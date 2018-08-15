@@ -12,53 +12,61 @@ Hi! This project is to quickly get familiar with Asp,Net MVC.
 
 doc：https://www.jianshu.com/p/5f6156cacc76
 
-## Action Result
-    Task: Please modify code and pass all TestCases
+## Basic Point
 
-    Code is in the BasicASP.NETMvc.Controllers.ActionResultController
+### 1. Result
+    code is in the BasicASP.NETMvc.Controllers.ActionResultController
     
-    TestCase is in the BasicASP.NETMvc.Controllers.ActionResultControllerTests
+    TestCase is in the BasicASP.NETMvc.Controllers.Tests.ActionResultControllerTests
     
-    Reference doc: 
-        https://www.cnblogs.com/supersnowyao/archive/2018/01/15/8287775.html
+    Please modify code and pass TestCase
     
-## 2.Razor View
-    Task: Please modify cshtml files to achieve the desired effect
+    doc: https://www.cnblogs.com/supersnowyao/archive/2018/01/15/8287775.html
+### 2.Authorization,Cookie,Session
+    Authorization Filter is the BasicASP.NETMvc.filter.LoginFilter 
     
-    View is in the BasicASP.NETMvc.Views.RazorView
+    [LoginFilter] method will be authorized
     
-    Code is in the BasicASP.NETMvc.Controllers.RazorViewController 
+    BasicASP.NETMvc.Controllers.AuthController.Page() will be authorized in this project 
     
-## 3.Authorization,Cookie,Session
+    cshtml is in the BasicASP.NETMvc.Views.Auth
     
-    Task: Please modify .cshtml and .cs files to achieve the desired effect
-        1. completion FilterConfig.cs,Web.config And Login Action,then you will have a simple authorization
-        2. use session transfer data
-         
-    Here we use Asp.Net MVC Forms type to authorize.
+    code is in the BasicASP.NETMvc.Controllers.RazorViewController 
     
-    Method BasicASP.NETMvc.Controllers.AuthController.Page() will be authorized in this project 
-        
-    View is under folder BasicASP.NETMvc.Views.Auth
+    Please modify .cshtml and .cs files to achieve the desired effect
     
-    Code is in the BasicASP.NETMvc.Controllers.AuthController 
+### 3.Routes
+    code is in the BasicASP.NETMvc.Controllers.RouteController
     
-    Session and cookie config is in BasicASP.NETMvc.Web.config
+    Please modify cshtml files to achieve the desired effect
+### 4.Life Cycle
+    doc:
+    https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/lifecycle-of-an-aspnet-mvc-5-application
+    https://www.cnblogs.com/xiao-bei/p/5165884.html
     
-    Reference doc:
-        https://www.cnblogs.com/JoeSnail/p/8250231.html
-        https://blog.csdn.net/slowlifes/article/details/79521680
-    
-## 4.Routes
-    Task: Please modify code to achieve the desired effect
-    
-    Code is in the BasicASP.NETMvc.Controllers.RouteController
-    
-    Route global config is in RouteConfig And WebApiConfig
-    
-## 5.Life Cycle
-    Reference doc:
-        https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/lifecycle-of-an-aspnet-mvc-5-application
-        https://www.cnblogs.com/xiao-bei/p/5165884.html
+## Some homework
+    First,you should finish the task in the part of Basic Point
+    Then you can search "# homework " in this project to finish it
+### What you need to do
+1. You need to use the property 'MovieDBContext' of MoviesController to help you finish this homework,it can help you do some CRUD action
+2. You need to hack the authorization result page redirection, to jump to the homework movie index page
+3. You need to read data from local-db for display on the movies site
+4. You need to add a button for redirect create movie site
+5. You need to finish the create logic in action
+6. You need to finish the edit logic in action
+7. You need to finish the delete logic in action
+8. You need to add the search logic
+9. When you finish it ,you will have a simple movie manage system
+
+### How to verify
+
+1. When you finish homework(1,2,3),you can see this page
+![image](BasicASP.NETMvc/mockup/Index-BasicPage.png)
+2. When you finish homework(4,5),you can see this site and create new movie data
+![image](BasicASP.NETMvc/mockup/Index-CreateButton.png)
+3. When you finish homework(6),the index site will be this
+![image](BasicASP.NETMvc/mockup/Index-HasEdit.png)
+4. When you finish homework(7),you can use the search
+5. When you have completed the homework, you can perform additions, deletions, and changes.
 --- 
 ### Good Luck!
