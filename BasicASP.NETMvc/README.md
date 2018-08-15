@@ -14,6 +14,7 @@ doc：https://www.jianshu.com/p/5f6156cacc76
 
 ## Basic Point
 
+    You can search "basic points  " in this project to finish it
 ### 1. Result
     code is in the BasicASP.NETMvc.Controllers.ActionResultController
     
