@@ -219,9 +219,9 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="images\Index-BasicPage.png" />
-    <Content Include="images\Index-CreateButton.png" />
-    <Content Include="images\Index-HasEdit.png" />
+    <Content Include="mockup\Index-BasicPage.png" />
+    <Content Include="mockup\Index-CreateButton.png" />
+    <Content Include="mockup\Index-HasEdit.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">

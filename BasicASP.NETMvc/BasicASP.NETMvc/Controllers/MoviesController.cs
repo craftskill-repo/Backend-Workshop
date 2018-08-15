@@ -19,7 +19,7 @@ namespace BasicASP.NETMvc.Controllers
         public ActionResult Index(string movieGenre, string searchString)
         {
             var genreLst = new List<string>();
-
+            
             var genreQry = from d in db.Movies
                            orderby d.Genre
                            select d.Genre;
