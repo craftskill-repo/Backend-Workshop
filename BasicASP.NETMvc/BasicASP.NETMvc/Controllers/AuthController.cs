@@ -51,14 +51,11 @@ namespace BasicASP.NETMvc.Controllers
         {
             //basic points 16 please add param into Cookie 
             // use cookie auth
-            
-            FormsAuthentication.SetAuthCookie(userName,true,"/");
         }
 
         private void AddValusToSession(string userName)
         {
             //basic points 17 Add param into Session and Seeeion key is "userName"
-            Session["userName"] = userName;
         }
     }
 }

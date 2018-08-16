@@ -28,20 +28,11 @@ namespace BasicASP.NETMvc.Controllers
 
             // # homework 3 -- read movies data from loacl-db,please use linq
 
-            var movies = from m in db.Movies
-                select m;
+            
             // # homework 7 -- filte movies data by conditions
-            if (!string.IsNullOrEmpty(searchString))
-            {
-                movies = movies.Where(s => s.Title.Contains(searchString));
-            }
+            
 
-            if (!string.IsNullOrEmpty(movieGenre))
-            {
-                movies = movies.Where(x => x.Genre == movieGenre);
-            }
-
-            return View(movies);
+            return View();
         }
 
         [HttpPost]
@@ -80,12 +71,6 @@ namespace BasicASP.NETMvc.Controllers
             Movie movie)
         {
             // # homework 5 -- save data to loacl-db
-            if (ModelState.IsValid)
-            {
-                db.Movies.Add(movie);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
 
             return View(movie);
         }
@@ -99,13 +84,7 @@ namespace BasicASP.NETMvc.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            Movie movie = db.Movies.Find(id);
-            if (movie == null)
-            {
-                return HttpNotFound();
-            }
-
-            return View(movie);
+            return View();
         }
 
         // POST: Movies/Edit/5
@@ -129,19 +108,9 @@ namespace BasicASP.NETMvc.Controllers
         {
             // # homework 9 -- find data by id 
             // when id is null ,return HttpStatusCode.BadRequest;
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-
-
-            Movie movie = db.Movies.Find(id);
-            if (movie == null)
-            {
-                return HttpNotFound();
-            }
-
-            return View(movie);
+            
+            
+            return View();
         }
 
         // POST: Movies/Delete/5
