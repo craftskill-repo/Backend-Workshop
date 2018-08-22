@@ -1,20 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Web;
-using System.Web.Http;
+﻿using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 using BasicASP.NETMvc.Models;
 
 namespace BasicASP.NETMvc.Controllers
 {
-    /*
-     * LoginCheckFilter is BasicASP.NETMvc.filter.LoginFilter
-     *
-     *
-     */
     public class AuthController : Controller
     {
         [System.Web.Mvc.AllowAnonymous]
@@ -40,10 +30,10 @@ namespace BasicASP.NETMvc.Controllers
 
 
         //basic points 14 please make sure this action should be authed.
-        [ValidateAntiForgeryToken]
-        [System.Web.Http.Authorize]
+        [Authorize]
         public ActionResult Page()
         {
+            // # homework 1 -- redirect to movies/index
             return View();
         }
 
