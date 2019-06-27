@@ -245,7 +245,7 @@ namespace BasicCSharp
         }
 
         [Fact]
-        public void should_get_sequence_excpetions()
+        public void should_remove_all_intersecting_elements_from_another_sequence()
         {
             var firstSequence = new[] { 1, 2, 3 };
             var secondSequence = new[] { 4, 3, 5 };
