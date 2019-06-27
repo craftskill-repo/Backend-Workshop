@@ -5,12 +5,11 @@ namespace BasicCSharp.Common
 {
     public class DisposableWithTracingDemoClass : IDisposable
     {
-        private readonly StringBuilder myTracer;
+        private readonly StringBuilder tracer = new StringBuilder();
 
-        public DisposableWithTracingDemoClass(StringBuilder tracer)
+        public DisposableWithTracingDemoClass()
         {
-            myTracer = tracer;
-            myTracer.AppendLine("constructor called.");
+            this.tracer.AppendLine("constructor called.");
         }
 
         public void Dispose()
