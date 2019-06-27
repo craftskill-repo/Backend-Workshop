@@ -10,7 +10,9 @@ namespace BasicCSharp
         public void should_be_able_to_compare_enums()
         {
             const bool bottomEqualsLeft = BorderSide.Bottom == BorderSide.Left;
+            #pragma warning disable 1718 // suppress compiler warning about comparing same variable
             const bool rightEqualsRight = BorderSide.Right == BorderSide.Right;
+            #pragma warning restore 1718
 
             // change the variable value for following 2 lines to fix the test.
             const bool expectedResultForBottomEqualsLeft = true;

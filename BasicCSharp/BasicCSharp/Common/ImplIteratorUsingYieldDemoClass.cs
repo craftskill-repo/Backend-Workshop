@@ -24,7 +24,9 @@ namespace BasicCSharp.Common
             yield return 1;
             yield return 2;
             yield break;
+            #pragma warning disable 0162 // suppress compiler warning about unreachable code
             yield return 3;
+            #pragma warning restore 0162
         }
 
         public IEnumerable<int> GetEvenNumber(IEnumerable<int> numbers)

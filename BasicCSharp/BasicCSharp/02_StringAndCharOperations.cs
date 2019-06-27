@@ -21,8 +21,12 @@ namespace BasicCSharp
         [Fact]
         public void should_using_stringbuilder_to_concat_string_efficiently()
         {
+            #pragma warning disable 0219 // suppress compiler warning about unused variables
+
             const string title = "Mr. ";
             const string name = "Hall";
+            
+            #pragma warning restore 0219
 
             var builder = new StringBuilder();
             // add at most 2 lines of code here concating variable "title" and "name".

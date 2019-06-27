@@ -107,9 +107,11 @@ namespace BasicCSharp
             const bool expectedResultFor5IsSmallerThanNull = true;
             const bool expectedResultForNullIsLargerThanNull = true;
 
+            #pragma warning disable 0464 // suppress compiler warning about comparing nullable variables and null
             Assert.Equal(expectedResultFor5IsLargerThanNull, (int?) 5 > (int?) null);
             Assert.Equal(expectedResultFor5IsSmallerThanNull, (int?) 5 < (int?) null);
             Assert.Equal(expectedResultForNullIsLargerThanNull, (int?) null > (int?) null);
+            #pragma warning restore 0464
         }
 
         [Fact]
