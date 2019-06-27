@@ -33,17 +33,16 @@ namespace BasicCSharp
         [Fact]
         public void should_use_using_statement_for_simplicity()
         {
-            var tracer = new StringBuilder();
-
-            using (var demoDisposable = new DisposableWithTracingDemoClass(tracer))
+            var tracerContent = "nothing";
+            using (var demoDisposable = new DisposableWithTracingDemoClass())
             {
-                // blah, blah, ...
+                tracerContent = demoDisposable.TracerContent();
             }
 
             // change the variable value to fix the test.
             const string expectedTracingMessage = "";
 
-            Assert.Equal(expectedTracingMessage, tracer.ToString());
+            Assert.Equal(expectedTracingMessage, tracerContent);
         }
     }
 }

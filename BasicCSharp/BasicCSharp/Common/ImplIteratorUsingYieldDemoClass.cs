@@ -27,13 +27,13 @@ namespace BasicCSharp.Common
             yield return 3;
         }
 
-        public IEnumerable<int> GetEvenNumber(IEnumerable<int> getOneToTen)
+        public IEnumerable<int> GetEvenNumber(IEnumerable<int> numbers)
         {
-            foreach (int numberInCollection in getOneToTen)
+            foreach (int number in numbers)
             {
-                if (numberInCollection % 2 == 0)
+                if (number % 2 == 0)
                 {
-                    yield return numberInCollection;
+                    yield return number;
                 }
             }
         }

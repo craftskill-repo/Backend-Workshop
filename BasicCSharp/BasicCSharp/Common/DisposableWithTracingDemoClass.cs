@@ -15,7 +15,12 @@ namespace BasicCSharp.Common
 
         public void Dispose()
         {
-            myTracer.AppendLine("dispose called.");
+            tracer.AppendLine("dispose called.");
+        }
+
+        public string TracerContent()
+        {
+            return tracer.ToString();
         }
     }
 }
