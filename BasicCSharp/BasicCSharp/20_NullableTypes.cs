@@ -113,7 +113,7 @@ namespace BasicCSharp
         }
 
         [Fact]
-        public void should_tell_equlity_for_nullable_types()
+        public void should_tell_equality_for_nullable_types()
         {
             // change the variable values for the following 2 lines to fix the test.
             const bool expectedResultForNullToNull = false;
