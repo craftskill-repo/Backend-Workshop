@@ -114,6 +114,17 @@ namespace BasicCSharp
         }
 
         [Fact]
+        public void should_use_object_initializer_to_initialise_new_object()
+        {
+            var demoClass = new AutoPropertyDemoClass() { Name = "My Name" };
+            
+            // please change variable value to correct one.
+            const string expected = "Your Name";
+
+            Assert.Equal(expected, demoClass.Name);
+        }
+
+        [Fact]
         public void should_execute_customized_logic_in_property()
         {
             var demoClass = new CustomizePropertyDemoClass();

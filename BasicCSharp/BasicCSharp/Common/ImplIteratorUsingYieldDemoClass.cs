@@ -24,16 +24,18 @@ namespace BasicCSharp.Common
             yield return 1;
             yield return 2;
             yield break;
+            #pragma warning disable 0162 // suppress compiler warning about unreachable code
             yield return 3;
+            #pragma warning restore 0162
         }
 
-        public IEnumerable<int> GetEvenNumber(IEnumerable<int> getOneToTen)
+        public IEnumerable<int> GetEvenNumber(IEnumerable<int> numbers)
         {
-            foreach (int numberInCollection in getOneToTen)
+            foreach (int number in numbers)
             {
-                if (numberInCollection % 2 == 0)
+                if (number % 2 == 0)
                 {
-                    yield return numberInCollection;
+                    yield return number;
                 }
             }
         }

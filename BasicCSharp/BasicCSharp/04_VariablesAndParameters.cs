@@ -28,10 +28,12 @@ namespace BasicCSharp
             const char expectedDefaultCharResult = 'a';
             var expectedDefaultObjectResult = new object();
 
+            #pragma warning disable xUnit2000 // suppress compiler warning about using default value expression as "actual" parameter
             Assert.Equal(expectedDefaultIntResult, default(int));
             Assert.Equal(expectedDefaultBoolResult, default(bool));
             Assert.Equal(expectedDefaultCharResult, default(char));
             Assert.Equal(expectedDefaultObjectResult, default(object));
+            #pragma warning restore xUnit2000
         }
 
         [Fact]

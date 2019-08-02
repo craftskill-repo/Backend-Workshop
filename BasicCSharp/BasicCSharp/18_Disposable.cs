@@ -9,12 +9,11 @@ namespace BasicCSharp
         [Fact]
         public void should_call_dispose_anyway_using_try_finally()
         {
-            var tracer = new StringBuilder();
             DisposableWithTracingDemoClass demoDisposable = null;
 
             try
             {
-                demoDisposable = new DisposableWithTracingDemoClass(tracer);
+                demoDisposable = new DisposableWithTracingDemoClass();
             }
             finally
             {
@@ -27,23 +26,22 @@ namespace BasicCSharp
             // change variable value to fix test.
             const string expectedTracingMessage = "";
 
-            Assert.Equal(expectedTracingMessage, tracer.ToString());
+            Assert.Equal(expectedTracingMessage, demoDisposable.TracerContent());
         }
 
         [Fact]
         public void should_use_using_statement_for_simplicity()
         {
-            var tracer = new StringBuilder();
-
-            using (var demoDisposable = new DisposableWithTracingDemoClass(tracer))
+            var tracerContent = "nothing";
+            using (var demoDisposable = new DisposableWithTracingDemoClass())
             {
-                // blah, blah, ...
+                tracerContent = demoDisposable.TracerContent();
             }
 
             // change the variable value to fix the test.
             const string expectedTracingMessage = "";
 
-            Assert.Equal(expectedTracingMessage, tracer.ToString());
+            Assert.Equal(expectedTracingMessage, tracerContent);
         }
     }
 }
